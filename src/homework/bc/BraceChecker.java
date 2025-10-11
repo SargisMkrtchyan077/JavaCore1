@@ -26,12 +26,12 @@ public class BraceChecker {
                 case ']':
                 case ')':
                     if (stck.getSize() == -1) {
-                        System.err.println("Error: closed " + text.charAt(size) + " but don't opened " + (size + 1));
+                        System.out.println("Error: closed " + text.charAt(size) + " but don't opened " + (size + 1));
                         inncorrect = false;
                     } else {
                         tmp = (char) stck.pop();
                         if (tmp != '(' && text.charAt(size) == ')' || tmp != '[' && text.charAt(size) == ']' || tmp != '{' && text.charAt(size) == '}') {
-                            System.err.println("Error: opened " + tmp + " but closed " + text.charAt(size) + " " + (size + 1));
+                            System.out.println("Error: opened " + tmp + " but closed " + text.charAt(size) + " " + (size + 1));
                             inncorrect = false;
                         }
                     }
@@ -39,7 +39,7 @@ public class BraceChecker {
             }
         }
         for (int i = stck.getSize(); i >= 0; i--) {
-            System.err.println("Error: " + (char) stck.pop() + " " + "opened but dont closed");
+            System.out.println("Error: " + (char) stck.pop() + " " + "opened but dont closed");
             inncorrect = false;
 
         }
