@@ -24,32 +24,32 @@ public class Book {
         return title;
     }
 
-    public String getAuthorName() {
-        return authorName;
-    }
-
-    public double getPrice() {
-        return price;
-    }
-
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getAuthorName() {
+        return authorName;
     }
 
     public void setAuthorName(String authorName) {
         this.authorName = authorName;
     }
 
+    public double getPrice() {
+        return price;
+    }
+
     public void setPrice(double price) {
         this.price = price;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
-    }
-
     public int getQuantity() {
         return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 
     @Override

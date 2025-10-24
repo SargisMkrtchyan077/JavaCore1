@@ -15,10 +15,7 @@ public class LibraryDemo {
     private static final String DELETE_BY_INDEX = "6";
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        BookStorage bookStorage = new BookStorage();
         boolean isRun = true;
-
         while (isRun) {
             printCommands();
             String command = scanner.nextLine();
@@ -50,7 +47,7 @@ public class LibraryDemo {
     }
 
     private static void addBook() {
-        System.out.println("Pleas input book's title");
+        System.out.println("Please input book's title");
         String bookTitle = scanner.nextLine();
         System.out.println("Please input book's authorName");
         String authorName = scanner.nextLine();
