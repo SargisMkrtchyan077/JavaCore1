@@ -1,4 +1,7 @@
-package homework.library;
+package employee.Storage;
+
+import model.Author;
+import model.Book;
 
 public class BookStorage {
 
@@ -32,6 +35,14 @@ public class BookStorage {
         }
     }
 
+
+    public void searchBookByAuthor(Author author) {
+        for (int i = 0; i < size; i++) {
+            if (books[i].getAuthor().equals(author)) {
+                System.out.println(books[i]);
+            }
+        }
+    }
     public void lookForTheBook(double min, double max) {
         boolean found = false;
         for (int i = 0; i < size; i++) {

@@ -1,20 +1,19 @@
-package homework.library;
+package model;
 
 import java.util.Objects;
 
 public class Book {
 
     private String title;
-    private String authorName;
+    private Author author;
     private double price;
     private int quantity;
 
-
-    public Book(String title, String authorName, double price, int quantity) {
+    public Book(Author author, String title, double price, int quantity) {
         this.title = title;
-        this.authorName = authorName;
         this.price = price;
         this.quantity = quantity;
+        this.author = author;
     }
 
     public Book() {
@@ -28,12 +27,12 @@ public class Book {
         this.title = title;
     }
 
-    public String getAuthorName() {
-        return authorName;
+    public Author getAuthor() {
+        return author;
     }
 
-    public void setAuthorName(String authorName) {
-        this.authorName = authorName;
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 
     public double getPrice() {
@@ -56,19 +55,19 @@ public class Book {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return Double.compare(price, book.price) == 0 && quantity == book.quantity && Objects.equals(title, book.title) && Objects.equals(authorName, book.authorName);
+        return Double.compare(price, book.price) == 0 && quantity == book.quantity && Objects.equals(title, book.title) && Objects.equals(author, book.author);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(title, authorName, price, quantity);
+        return Objects.hash(title, author, price, quantity);
     }
 
     @Override
     public String toString() {
         return "Book{" +
                 "title='" + title + '\'' +
-                ", authorName='" + authorName + '\'' +
+                ", author=" + author +
                 ", price=" + price +
                 ", quantity=" + quantity +
                 '}';
