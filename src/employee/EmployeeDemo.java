@@ -37,6 +37,12 @@ public class EmployeeDemo implements EmployeeImpl {
                     Employee companyName = employeeStorage.searchEmployeeByCompanyName(company);
                     System.out.println(companyName);
                     break;
+                case SEARCH_EMPLOYEES_BY_POSITION_LEVEL:
+                    System.out.println("Pleas input employee position from this list: JUNIOR,MIDDLE,SENIOR,LEAD");
+                    PositionLevel position = PositionLevel.valueOf(scanner.nextLine().toUpperCase());
+                    Employee positionLevel = employeeStorage.searchEmployeeByPositionLevel(position);
+                    System.out.println(positionLevel);
+                    break;
             }
         }
     }
@@ -54,7 +60,9 @@ public class EmployeeDemo implements EmployeeImpl {
         String company = scanner.nextLine();
         System.out.println("Please input position");
         String position = scanner.nextLine();
-        Employee employee = new Employee(name, surname, employeeID, salary, company, position);
+        System.out.println("Please input employee's position from this list: JUNIOR,MIDDLE,SENIOR,LEAD");
+        PositionLevel positionLevel = PositionLevel.valueOf(scanner.nextLine().toUpperCase());
+        Employee employee = new Employee(name, surname, employeeID, salary, company, positionLevel);
         employeeStorage.addEmployee(employee);
         System.out.println("employee added successfully");
     }

@@ -7,6 +7,7 @@ public interface EmployeeImpl {
     String PRINT_ALL_EMPLOYEES = "2";
     String SEARCH_EMPLOYEE_BY_ID = "3";
     String SEARCH_EMPLOYEE_BY_COMPANY_NAME = "4";
+    String SEARCH_EMPLOYEES_BY_POSITION_LEVEL = "5";
 
     static void printEmployees() {
         System.out.println("Please input " + EXIT + " for EXIT");
@@ -14,6 +15,7 @@ public interface EmployeeImpl {
         System.out.println("Please input " + PRINT_ALL_EMPLOYEES + " for PRINT_ALL_EMPLOYEES");
         System.out.println("Please input " + SEARCH_EMPLOYEE_BY_ID + " for SEARCH_EMPLOYEE_BY_ID");
         System.out.println("Please input " + SEARCH_EMPLOYEE_BY_COMPANY_NAME + " for SEARCH_EMPLOYEE_BY_COMPANY_NAME");
+        System.out.println("Please input " + SEARCH_EMPLOYEES_BY_POSITION_LEVEL + " for SEARCH_EMPLOYEES_BY_POSITION_LEVEL");
 
 
     }

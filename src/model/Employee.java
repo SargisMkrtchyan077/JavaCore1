@@ -1,5 +1,7 @@
 package model;
 
+import employee.PositionLevel;
+
 import java.util.Objects;
 
 public class Employee {
@@ -10,18 +12,24 @@ public class Employee {
     private int salary;
     private String company;
     private String position;
+    private PositionLevel positionLevel;
 
-    public Employee(String name, String surname, String employeeID, int salary, String company, String position) {
+    public Employee() {
+
+    }
+
+    public Employee(String name, String surname, String employeeID, int salary, String company, String position, PositionLevel positionLevel) {
         this.name = name;
         this.surname = surname;
         this.employeeID = employeeID;
         this.salary = salary;
         this.company = company;
         this.position = position;
+        this.positionLevel = positionLevel;
     }
 
-    public Employee() {
 
+    public Employee(String name, String surname, String employeeID, int salary, String company, PositionLevel positionLevel) {
     }
 
     public String getName() {
@@ -72,16 +80,24 @@ public class Employee {
         this.position = position;
     }
 
+    public PositionLevel getPositionLevel() {
+        return positionLevel;
+    }
+
+    public void setPositionLevel(PositionLevel positionLevel) {
+        this.positionLevel = positionLevel;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Employee employee = (Employee) o;
-        return salary == employee.salary && Objects.equals(name, employee.name) && Objects.equals(surname, employee.surname) && Objects.equals(employeeID, employee.employeeID) && Objects.equals(company, employee.company) && Objects.equals(position, employee.position);
+        return salary == employee.salary && Objects.equals(name, employee.name) && Objects.equals(surname, employee.surname) && Objects.equals(employeeID, employee.employeeID) && Objects.equals(company, employee.company) && Objects.equals(position, employee.position) && positionLevel == employee.positionLevel;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, surname, employeeID, salary, company, position);
+        return Objects.hash(name, surname, employeeID, salary, company, position, positionLevel);
     }
 
     @Override
@@ -93,6 +109,7 @@ public class Employee {
                 ", salary=" + salary +
                 ", company='" + company + '\'' +
                 ", position='" + position + '\'' +
+                ", positionLevel=" + positionLevel +
                 '}';
     }
 }
