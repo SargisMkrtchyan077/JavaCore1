@@ -1,4 +1,4 @@
-package employee.Storage;
+package employee.storage;
 
 import employee.PositionLevel;
 import model.Employee;

@@ -1,6 +1,6 @@
 package homework.library;
 
-import employee.Storage.BookStorage;
+import employee.storage.BookStorage;
 
 import java.util.Scanner;
 

@@ -1,7 +1,9 @@
-package employee;
+package employee.employeedemo;
 
+import employee.EmployeeImpl;
+import employee.PositionLevel;
 import model.Employee;
-import employee.Storage.EmployeeStorage;
+import employee.storage.EmployeeStorage;
 
 import java.util.Scanner;
 

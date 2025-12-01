@@ -1,4 +1,4 @@
-package employee.Storage;
+package employee.storage;
 
 import model.Author;
 import model.Book;

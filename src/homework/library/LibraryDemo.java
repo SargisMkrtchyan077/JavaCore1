@@ -1,7 +1,7 @@
 package homework.library;
 
-import employee.Storage.AuthorStorage;
-import employee.Storage.BookStorage;
+import employee.storage.AuthorStorage;
+import employee.storage.BookStorage;
 import model.Author;
 import model.Book;
 
